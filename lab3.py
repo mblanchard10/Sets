@@ -21,13 +21,15 @@ def main():
       set1[i] = set1[i].strip()
    
    set2 = set2list.split(",")
-
-   #print("Enter 1 for one -to- one (Injective)")
-   #print("Enter 2 for onto (Surjective)")
-   #answer = input("Enter Here: ")
+   for i in range(0, len(set2):
+      set2[i] = set2[i].strip()
    
-   map(addition,set1,set2) 
-   #if (answer == 1): 
+   if function == "x":
+      if len(set1) == len(set2):
+         for i in range(len(set1)):
+            print(set1[i] + " -> " + set2[i])
+      else:
+         print("For One to One, both sets must be the same size.")
    
    
 if __name__ == "__main__":
