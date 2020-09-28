@@ -14,10 +14,10 @@ def main():
    w = 0
    while w == 0: 
       print("Enter two sets as 1,2,3 and a,b,c etc. Then Specify the function type. Enter 1 for one to one, or 2 for onto.")
-      print("Enter with single quotations(' ') \n")
+      print("\n")
 
-      set1list = str(input("Set One: "))
-      set2list = str(input("Set Two: "))
+      set1list = input("Set One: ")
+      set2list = input("Set Two: ")
       function = int(input("Function Type: "))
 
       set1 = set1list.split(",")
@@ -35,17 +35,17 @@ def main():
             print(set1[i] + " -> " + set2[i])
    
       if function == 2:
-         if len(set1) > len(set2):
+         if len(set1) >= len(set2):
             for i in range(len(set1)):
                index = i
-            if index >= len(set2):
-               index = len(set2)-1
-            print(set1[i] + " -> " + set2[index])
+               if index >= len(set2):
+                  index = len(set2)-1
+               print(set1[i] + " -> " + set2[index])
          if len(set1) < len(set2):
             print("For onto, set two must be smaller or equal to set one.")
 
       print("\nWana do another? Enter 0 to go again or 1 to quit.")
-      w = input("Enter Here: ")
+      w = int(input("Enter Here: "))
    
 if __name__ == "__main__":
    main()
